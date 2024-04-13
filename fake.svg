@@ -1,0 +1,139 @@
+
+<svg viewBox="0 0 0 0"
+     width="0"
+     height="0"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     fill-rule="evenodd"
+     fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+
+    <defs>
+        <pattern id="green" height="10" width="10" patternUnits="userSpaceOnUse">
+         <line x1="0" y1="0" x2="10" y2="10" stroke-width="2" stroke="#99AA77"/>
+        </pattern>
+    </defs>
+    <marker id="wall" markerWidth="20" markerHeight="20" refX="10" refY="10" markerUnits="userSpaceOnUse">
+        <circle cx="10" cy="10" r="10" fill="context-stroke" stroke="context-stroke" stroke-width="1"/>
+    </marker>
+    <filter id="shadow">
+        <feDropShadow dx="2" dy="2" stdDeviation="2"/>
+    </filter>
+
+
+    <style>
+        <!-- Generation of the style HERE-->
+        <!-- Generate a style for each map element class -->
+        .Road {
+                stroke: #FFF2C8;
+                stroke-width: 2.0;
+                fill: none;
+                marker: none;
+                z-index: 1;
+                filter: none;
+            }
+        .River {
+                stroke: #779988;
+                stroke-width: 36.0;
+                fill: none;
+                marker: none;
+                z-index: 999;
+                filter: none;
+            }
+        .Wall {
+                stroke: #606661;
+                stroke-width: 7.6;
+                fill: none;
+                marker: url(#wall);
+                z-index: 0;
+                filter: none;
+            }
+        .Plank {
+                stroke: #FFF2C8;
+                stroke-width: ;
+                fill: none;
+                marker: none;
+                z-index: 0;
+                filter: none;
+            }
+        .Building {
+                stroke: black;
+                stroke-width: ;
+                fill: #D6A36E;
+                marker: none;
+                z-index: 0;
+                filter: url(#shadow);
+            }
+        .Prism {
+                stroke: black;
+                stroke-width: ;
+                fill: none;
+                marker: none;
+                z-index: 0;
+                filter: none;
+            }
+        .Square {
+                stroke: black;
+                stroke-width: ;
+                fill: #F2F2DA;
+                marker: none;
+                z-index: 0;
+                filter: none;
+            }
+        .Green {
+                stroke: #99AA77;
+                stroke-width: ;
+                fill: url(#green);
+                marker: none;
+                z-index: 0;
+                filter: none;
+            }
+        .Field {
+                stroke: #99AA77;
+                stroke-width: ;
+                fill: url(#green);
+                marker: none;
+                z-index: 0;
+                filter: none;
+            }
+        .Tree {
+                stroke: black;
+                stroke-width: ;
+                fill: #667755;
+                marker: none;
+                z-index: 0;
+                filter: none;
+            }
+        .District {
+                stroke: none;
+                stroke-width: ;
+                fill: none;
+                marker: none;
+                z-index: 0;
+                filter: none;
+            }
+        .Earth {
+                stroke: black;
+                stroke-width: ;
+                fill: none;
+                marker: none;
+                z-index: 0;
+                filter: none;
+            }
+        .Water {
+                stroke: black;
+                stroke-width: ;
+                fill: #779988;
+                marker: none;
+                z-index: 0;
+                filter: none;
+            }
+    </style>
+
+    <rect x="0" y="0" width="0" height="0" fill="#FFF2C8" />
+        <g transform="scale(-1 -1) translate(0 0)">
+            <g transform="scale(-1 1) translate(0 0)">
+            <!-- Generate for each item of the map -->
+            </g>
+        </g>
+</svg>

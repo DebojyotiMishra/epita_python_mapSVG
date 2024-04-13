@@ -1,0 +1,48 @@
+
+<svg viewBox="0 0 {{bbox.width}} {{bbox.height}}"
+     width="{{bbox.width}}"
+     height="{{bbox.height}}"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     fill-rule="evenodd"
+     fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+
+    <defs>
+        <pattern id="green" height="10" width="10" patternUnits="userSpaceOnUse">
+         <line x1="0" y1="0" x2="10" y2="10" stroke-width="2" stroke="#99AA77"/>
+        </pattern>
+    </defs>
+    <marker id="wall" markerWidth="20" markerHeight="20" refX="10" refY="10" markerUnits="userSpaceOnUse">
+        <circle cx="10" cy="10" r="10" fill="context-stroke" stroke="context-stroke" stroke-width="1"/>
+    </marker>
+    <filter id="shadow">
+        <feDropShadow dx="2" dy="2" stdDeviation="2"/>
+    </filter>
+
+
+    <style>
+        <!-- Generation of the style HERE-->
+        <!-- Generate a style for each map element class -->
+        {{#classes}}
+        .{{__name__}} {
+                stroke: {{stroke}};
+                stroke-width: {{stroke_width}};
+                fill: {{fill}};
+                marker: {{marker}};
+                z-index: {{z_order}};
+                filter: {{filter}};
+            }
+        {{/classes}}
+    </style>
+
+    <rect x="0" y="0" width="{{bbox.width}}" height="{{bbox.height}}" fill="#FFF2C8" />
+        <g transform="scale(-1 -1) translate({{bbox.x}} {{bbox.y}})">
+            <g transform="scale(-1 1) translate(0 0)">
+            <!-- Generate for each item of the map -->
+            {{#items}}
+                {{{.}}}
+            {{/items}}
+            </g>
+        </g>
+</svg>
